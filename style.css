@@ -1,0 +1,163 @@
+h1{
+    margin: 30px 30px 100px 30px;
+    font-size: 5rem;
+}
+
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    color: white;
+}
+table td, table th {
+    border: 10px solid black;
+}
+
+td{
+    width: 25%;
+    overflow: hidden;
+    height: 300px;
+}
+
+tr {
+    width: 100%;
+}
+
+tr:last-child{
+    border-bottom: none;
+}
+
+tr:first-child{
+    border-top: none;
+}
+
+td:first-child{
+    border-left: none;
+}
+
+td:last-child{
+    border-right: none;
+}
+td>div{
+    margin:20px;
+}
+#button1{
+    background-color: aqua;
+}
+#button1:hover{
+    background-color:burlywood;
+}
+#button2{
+    background-color: yellowgreen;
+    font-size: 4rem;
+    text-align: center;
+}
+#button3{
+    background-color: #1C5544;
+}
+#button4{
+    background-color: burlywood;
+}
+.icon-wrapper{
+    width: 100px;
+    margin: auto;
+    padding-top: 25%;
+}
+#sun:active{
+    transform: rotate(800deg);
+    transform-origin: center;
+    transition: transform 4s;
+}
+#button5{
+    background-color: #5a68e2;
+}
+#smile{
+    rotate: 0deg;
+    transform-origin: center;
+}
+#button6{
+    background-color: #DA0808;
+    text-align: center;
+    font-size: 3rem;
+    line-height: 130%;
+}
+#button6:hover{
+    background-color: #1C5544;
+}
+#button7{
+    background-color: burlywood;
+}
+#image1{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+#image2{
+    display: none;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+#button8{
+    background-color: black;
+}
+#button9{
+    background-color: darkmagenta;
+}
+#sun2{
+    display: none;
+}
+#button10{
+    background-color: burlywood;
+}
+#star:active{
+    transform: scale(2);
+    transition: transform 2s;
+}
+#button11{
+    background-color: #5a68e2;
+    font-size: 4rem;
+    text-align: center;
+}
+#button12{
+    background-color: yellowgreen;
+}
+#button13{
+    background-image: url("cat1.jpg");
+    background-size: cover;
+    background-color: #1C5544;
+}
+#button14{
+    background-image: radial-gradient(darkmagenta, aqua);
+}
+.button{
+    height: 260px;
+}
+.unfinished-button{
+    background-color: black;
+    height: 260px;
+}    
+#center-2-vertically, #center-11-vertically{
+    padding-top: 25%;
+}
+
+#center-6-vertically{
+    padding-top: 20%;
+}
+
+body{
+    margin: 0;
+    font-family: source-sans-pro, sans-serif;
+}
+button, button>a:link, button>a:visited{
+    font-size: 2rem;
+    border-radius: 30px;
+    text-align: center;
+    padding: 12px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    border: none;
+}
