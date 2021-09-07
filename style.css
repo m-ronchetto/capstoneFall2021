@@ -121,6 +121,7 @@ td>div{
 }
 #button12{
     background-color: yellowgreen;
+    position: relative;
 }
 #button13{
     background-image: url("cat1.jpg");
@@ -129,6 +130,35 @@ td>div{
 }
 #button14{
     background-image: radial-gradient(darkmagenta, aqua);
+}
+#button15{
+    background-color: #1C5544;
+}
+#button16{
+    background-color: aqua;
+}
+#hidden_square{
+    background-color: yellowgreen;
+    width: 5%;
+    display: none;
+}
+#button17{
+    background-color: burlywood;
+}
+
+#load:active{
+    transform: rotate(1200deg);
+    transform-origin: center;
+    transition: transform 4s;
+}
+#button18{
+    background-color: black;
+}
+#button19{
+    background-color: darkmagenta;
+}
+#button20{
+    background-color: blueviolet;
 }
 .button{
     height: 260px;
