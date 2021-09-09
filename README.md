@@ -1,4 +1,4 @@
-# capstoneFall2021
+# Interaction Capstone Fall 2021
 
 Site Link: https://m-ronchetto.github.io/capstoneFall2021/
 
