@@ -1,0 +1,569 @@
+h1{
+    margin: 30px 30px 70px 30px;
+    font-size: 5rem;
+}
+
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    color: white;
+}
+table td, table th {
+    border: 10px solid black;
+}
+
+td{
+    width: 25%;
+    overflow: hidden;
+    height: 300px;
+}
+
+tr {
+    width: 100%;
+}
+
+tr:last-child{
+    border-bottom: none;
+}
+
+tr:first-child{
+    border-top: none;
+}
+
+td:first-child{
+    border-left: none;
+}
+
+td:last-child{
+    border-right: none;
+}
+td>div{
+    margin:20px;
+}
+#button1{
+    background-color: aqua;
+}
+#button1:hover{
+    background-color:burlywood;
+}
+#button2{
+    background-color: yellowgreen;
+    font-size: 4rem;
+    text-align: center;
+}
+#button3{
+    background-color: #1C5544;
+}
+#button4{
+    background-color: burlywood;
+}
+.icon-wrapper{
+    width: 100px;
+    margin: auto;
+    padding-top: 25%;
+}
+#sun:active{
+    transform: rotate(800deg);
+    transform-origin: center;
+    transition: transform 4s;
+}
+#button5{
+    background-color: #5a68e2;
+}
+#smile{
+    rotate: 0deg;
+    transform-origin: center;
+}
+#button6{
+    background-color: #DA0808;
+    text-align: center;
+    font-size: 3rem;
+    line-height: 130%;
+}
+#button6:hover{
+    background-color: #1C5544;
+}
+#button7{
+    background-color: burlywood;
+}
+#image1{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+#image2{
+    display: none;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+#button8{
+    background-color: black;
+}
+#button9{
+    background-color: darkmagenta;
+}
+#sun2{
+    display: none;
+}
+#button10{
+    background-color: burlywood;
+}
+#star:active{
+    transform: scale(2);
+    transition: transform 2s;
+}
+#button11{
+    background-color: #5a68e2;
+    font-size: 4rem;
+    text-align: center;
+}
+#button12{
+    background-color: yellowgreen;
+    position: relative;
+}
+#button13{
+    background-image: url("cat1.jpg");
+    background-size: cover;
+    background-color: #1C5544;
+}
+#button14{
+    background-image: radial-gradient(darkmagenta, aqua);
+}
+#button15{
+    background-color: #1C5544;
+}
+#button16{
+    background-color: aqua;
+}
+#hidden_square{
+    background-color: yellowgreen;
+    width: 0%;
+    height: 0%;
+    display: none;
+}
+#button17{
+    background-color: burlywood;
+}
+
+#load:active{
+    transform: rotate(1200deg);
+    transform-origin: center;
+    transition: transform 4s;
+}
+#button18{
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+}
+#button19{
+    background-image: linear-gradient(to right,#3204fdba, #9907facc), url("button19image.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#button20{
+    background-color: #DA0808;
+    text-align: center;
+}
+#button21{
+    background-color: darkmagenta;
+}
+#centering21{
+    padding-left: 5%;
+    padding-top: 20%;
+}
+#button22{
+    background-color: yellowgreen;
+    position: relative;
+    overflow: hidden;
+}
+#button23{
+    background-color: aqua;
+}
+@keyframes colorChange {
+    0%   {background-color: aqua;}
+    50%  {background-color: burlywood;}
+    100% {background-color: aqua;}
+}
+#button23:hover{
+    animation-name: colorChange;
+    animation-duration: 5s;
+}
+#arrow:hover{
+    transform: rotate(1200deg);
+    transform-origin: center;
+    transition: transform 5s;
+}
+#button24{
+    background-color: #1C5544;
+    position: relative;
+    overflow: hidden;
+}
+#rectangle{
+    background-color: yellowgreen;
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    top: 40%;
+}
+#button25{
+    background-color: #DA0808;
+}
+#hidden_square2{
+    background-color: burlywood;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#button26{
+    background-color: #FFCE31;
+}
+#rectangle2{
+    margin:auto;
+    height: 100%;
+    width: 40; 
+    background-color: darkmagenta;
+}
+#button27{
+    background-color: #5a68e2;
+}
+#hidden_square3{
+    background-color: aqua;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#button28{
+    background-color: burlywood;
+    overflow: hidden;
+}
+#rectangle3{
+    background-color: #FFCE31;
+    height: 100%;
+    width: 120px;
+    margin: auto;
+}
+#button29{
+    background-color: yellowgreen;
+    display: flex;
+}
+#rectangle4{
+    background-color: aqua;
+    width: 100%;
+    height: 90px;
+    margin: auto auto;
+}
+#button30{
+    background-color: darkmagenta;
+    overflow: hidden;
+}
+#button30circle{
+    border-radius: 100%;
+    background-color: white;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 50%;
+    top: 50%;
+}
+#button31{
+    overflow: hidden;
+}   
+#button31content{
+    background-color: #DA0808;
+    background-image: url("button31image.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+}
+#button31content:active{
+    transform: rotate(-720deg);
+    transition: transform 3s;
+    border-radius: 100%;
+}
+#button32{
+    background-color: #1C5544;
+    display: flex;
+}
+#button32square{
+    margin:auto auto;
+    background-color: yellowgreen;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+}
+#button33{
+    background-color: #DA0808;
+}
+#button34{
+    background-color: aqua;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+}
+#b34c{
+    background-color: #5a68e2;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    top: 40%;
+    left: 40%;
+    position: absolute;
+}
+#button35{
+    background-color: yellowgreen;
+    position: relative;
+}
+#b35c{
+    background-color: #1C5544;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    top: 5%;
+    left: 5%;
+    position: absolute;
+}
+#button36{
+    position: relative;
+    background-color: burlywood;
+}
+#b36c{
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: #DA0808;
+}
+#button37{
+    background-color: #5a68e2;
+    position: relative;
+}
+#b37c{
+    background-color: aqua;
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    top: 5%;
+    left: 40%;
+    position: absolute;
+}
+#button38{
+    background-color: #1C5544;
+    text-align: center;
+    font-size: 3rem;
+}
+#button39{
+    background-color: #FFCE31;
+    text-align: center;
+    font-size: 2rem;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted #DA0808;
+  }
+
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+    background-color: #DA0808;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+  }
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+#button40{
+    background-color: black;
+    overflow: hidden;
+}
+#rectangle-set{
+    flex-direction: row;
+    display: flex;
+    height: 100%;
+}
+#rectangle-set>div:hover{
+    width:16px;
+    height: 100%;
+    margin: auto;
+}
+#rectangle5{
+    background-color: #FF0000;
+    height: 100%;
+    width: 3px;
+    margin: auto;
+}
+#rectangle6{
+    background-color: #FF8A00;
+    height: 100%;
+    width: 3px;
+    margin: auto;
+}
+#rectangle7{
+    background-color: #FAFF00;
+    height: 100%;
+    width: 3px;
+    margin: auto;
+}
+#rectangle8{
+    background-color: #00FF19;
+    height: 100%;
+    width: 3px;
+    margin: auto;
+}
+#rectangle9{
+    background-color: #6100FF;
+    height: 100%;
+    width: 3px;
+    margin: auto;
+}
+#rectangle10{
+    background-color: #DB00FF;
+    height: 100%;
+    width: 3px;
+    margin: auto;
+}
+#button41{
+    background-color: yellowgreen;
+    position: relative;
+    overflow: hidden;
+}
+#triangle2{
+    width:0; 
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: -80px;
+    border-bottom:260px solid #1C5544; 
+    border-left:80px solid transparent; 
+    border-right:80px solid transparent;
+}
+#button42{
+    background-color: darkmagenta;
+    position: relative;
+    overflow: hidden;
+}
+#triangle3{
+    width:0; 
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: calc(100% - 80px);
+    border-top:260px solid #FFCE31; 
+    border-left:80px solid transparent; 
+    border-right:80px solid transparent;
+}
+#button43{
+    background-color: aqua;
+    position: relative;
+    overflow: hidden;
+}
+#triangle4{
+    width:0; 
+    height: 0;
+    position: absolute;
+    top: -80px;
+    left: 0;
+    border-left:260px solid #5a68e2; 
+    border-top:80px solid transparent; 
+    border-bottom:80px solid transparent;
+}
+#button44{
+    background-color: #5a68e2;
+}
+#button45{
+    background-color: burlywood;
+}
+#rectangle-set2{
+    flex-direction: row;
+    display: flex;
+    height: 100%;
+}
+#rectangle11, #rectangle12, #rectangle13, #rectangle14{
+    background-color: #DA0808;
+    height: 100%;
+    width: 20px;
+    margin: auto;
+}
+#button46{
+    background-color: #DA0808;
+    overflow-wrap: break-word;
+    overflow-y: hidden;
+    font-size: 2rem;
+    color: black;
+}
+#button47{
+    background-color: #1C5544;
+    position: relative;
+    overflow: hidden;
+}
+#triangle5{
+    width:0; 
+    height: 0;
+    position: absolute;
+    top: calc(100% - 80px);
+    left: 0;
+    border-right:260px solid yellowgreen; 
+    border-top:80px solid transparent; 
+    border-bottom:80px solid transparent;
+}
+#button48{
+    background-color: #FFCE31;
+    position: relative;
+    overflow: hidden;
+}
+#rectangle-set3{
+    flex-direction: row;
+    display: flex;
+    height:100%;
+}
+#rectangle15,#rectangle16, #rectangle17,#rectangle18, #rectangle19{
+    background-color: darkmagenta;
+    height: 100%;
+    width: 40px;
+    margin: auto;
+}
+.button{
+    height: 260px;
+}
+.unfinished-button{
+    background-color: black;
+    height: 260px;
+}    
+#center-2-vertically, #center-11-vertically{
+    padding-top: 25%;
+}
+#center-6-vertically{
+    padding-top: 20%;
+}
+#center-38-vertically, #center-39-vertically{
+    padding-top: 15%;
+}
+
+body{
+    margin: 0;
+    font-family: source-sans-pro, sans-serif;
+}
+button, button>a:link, button>a:visited{
+    font-size: 2rem;
+    border-radius: 30px;
+    text-align: center;
+    padding: 12px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    border: none;
+}
