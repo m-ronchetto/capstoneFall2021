@@ -1,0 +1,44 @@
+polyline{
+    fill: none;
+    stroke: black;
+    stroke-width: 2px;
+}
+line{
+    stroke-width: 15px;
+}
+#boldPoly{
+    stroke-width: 15px;
+}
+.thinLine{
+    stroke-width: 2px;
+}
+#horizontal{
+    fill:black;
+    stroke: none;
+}
+.yellow{
+    fill: #F9D507;
+    stroke: none;
+}
+.red{
+    fill: #F90505;
+    stroke: none;
+}
+.blue{
+    fill:#0781C0;
+    stroke:none;
+}
+.hidden, .hidden_b, .hidden_y{
+    fill:none;
+    stroke:none;
+}
+body{
+    padding-left: 5%;
+    margin: auto;
+}
+#container{
+    display: flex;
+}
+svg>svg{
+    display: inline;
+}

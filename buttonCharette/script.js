@@ -261,7 +261,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         $("#rectangle4").animate({height: "100%", width: "100%"}, 1500);
     });
 
-    //button 30: display circle at mouse position
+    //button 30: display circle at position
     $( "#button30" ).mousemove(function( event ) {
         $("#button30circle").css({
             left: event.pageX -20,
