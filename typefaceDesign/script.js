@@ -1,218 +1,251 @@
-<<<<<<< HEAD
+//Overall To Do:
+  // Active State: Animations are reverting, hidden positions are absolute
+  // Hover States: Slow and sad looking, no transition back
+
 //reusable functions
 //Status: working, may want to make transform functions
 let upperBound = 1;
 let lowerBound= 0;
+let upperBoundX = 4000;
+let upperBoundY = 5000;
+let lowerBoundX = 0;
+let lowerBoundY = 0;
+let bodyPaddingLeft = 100;
 
 function changeColor() {
   let colors = ["#F90505", "#F9D507", "#0781C0"];
   let random = Math.floor(Math.random()*3);
   return colors[random];
+};
+
+function randomInRange(lowerBound, upperBound){
+  return (Math.random()*(upperBound-lowerBound)+lowerBound);
+};
+
+//Red+Hidden active
+//Status: Working, still boring
+$(".red_cont, .red").click(function(){
+  let hiddens = document.getElementsByClassName("hidden");
+  let reds = document.getElementsByClassName("red");
+  for(let i = 0; i < hiddens.length; i++){
+    let bounding = hiddens[i].getBoundingClientRect();
+    let oldX = parseFloat(bounding.x);
+    let oldY = parseFloat(bounding.y);
+    let newWidth = randomInRange(50,200);
+    let newHeight = randomInRange(50,200);
+    let newX = oldX + randomInRange(-50,50)-bodyPaddingLeft;
+    let newY = oldY + randomInRange(-50,50);
+    newX = Math.max(Math.min(newX, upperBoundX), lowerBoundX);
+    newY = Math.max(Math.min(newY, upperBoundY), lowerBoundY);
+    console.log(oldX);
+    console.log(newX);
+
+    $(hiddens[i]).animate({
+      x: newX,
+      y: newY,
+      width: newWidth,
+      height: newHeight
+    }, 400, complete=function(){
+
+        hiddens[i].setAttribute("x", newX);
+        hiddens[i].setAttribute("y", newY);
+        hiddens[i].setAttribute("width", newWidth);
+        hiddens[i].setAttribute("height", newHeight);
+        hiddens[i].style.fill = changeColor();
+      } );
+
   }
+  for(let i = 0; i < reds.length; i++){
+    let bounding = reds[i].getBoundingClientRect();
+    let oldX = parseFloat(bounding.x);
+    let oldY = parseFloat(bounding.y);
+    let newWidth = randomInRange(50,200);
+    let newHeight = randomInRange(50,200);
+    let newX = oldX + randomInRange(-50,50)-bodyPaddingLeft;
+    let newY = oldY + randomInRange(-50,50);
+    newX = Math.max(Math.min(newX, upperBoundX), lowerBoundX);
+    newY = Math.max(Math.min(newY, upperBoundY), lowerBoundY);
+    console.log(oldX);
+    console.log(newX);
 
-function scaleElements(upperBound, lowerBound){
-  return (Math.random()*lowerBound + (upperBound-lowerBound));
-};
+    $(reds[i]).animate({
+      x: newX,
+      y: newY,
+      width: newWidth,
+      height: newHeight
+    }, 400, complete=function(){
 
-function positionElements(upperBound, lowerBound){
-  return (Math.random()*lowerBound + (upperBound-lowerBound));
-};
+        reds[i].setAttribute("x", newX);
+        reds[i].setAttribute("y", newY);
+        reds[i].setAttribute("width", newWidth);
+        reds[i].setAttribute("height", newHeight);
+      } );
 
-//active states
-//Status: working, need to implement smooth animation, special letter tweaks
-$(".red_cont").click(function(){
-  $(".hidden").css({
-    "fill": changeColor(),
-    "width": scaleElements(50,100),
-    "height": scaleElements(50,100),
-    "x": positionElements(175, 250),
-    "y": positionElements(175, 250)
-  });
-  $(".red").animate({
-    "width": scaleElements(50,100),
-    "height": scaleElements(50,100),
-    "x": positionElements(175, 250),
-    "y": positionElements(175, 250)
-  }, 400, function(){});
-  $("line:not('.thinLine')").css('stroke-width', (Math.random()*15 +20));
+  }
+  $("line:not('.thinLine')").css('stroke-width', randomInRange(10,40));
 });
 
-$(".blue_cont").click(function(){
-  $(".hidden_b").css({
-    "fill": changeColor(),
-    "width": positionElements(40,90),
-    "height": positionElements(40,90),
-    "x": scaleElements(60, 120),
-    "y": scaleElements(60, 120)
-  });
-  $(".blue").animate({
-    "width": positionElements(40,90),
-    "height": positionElements(40,90),
-    "x": scaleElements(60, 120),
-    "y": scaleElements(60, 120)
-  }, 300, function(){});
-  $("line").css('stroke-width', (Math.random()*15 +10));
+//Blue+Hidden Active
+$(".blue_cont, .blue").click(function(){
+  let hiddens = document.getElementsByClassName("hidden_b");
+  let blues = document.getElementsByClassName("blue");
+  for(let i = 0; i < blues.length; i++){
+    let bounding = blues[i].getBoundingClientRect();
+    let oldX = parseFloat(bounding.x);
+    let oldY = parseFloat(bounding.y);
+    let newWidth = randomInRange(50,200);
+    let newHeight = randomInRange(50,200);
+    let newX = oldX + randomInRange(-50,50)-bodyPaddingLeft;
+    let newY = oldY + randomInRange(-50,50);
+    newX = Math.max(Math.min(newX, upperBoundX), lowerBoundX);
+    newY = Math.max(Math.min(newY, upperBoundY), lowerBoundY);
+    console.log(oldX);
+    console.log(newX);
+
+    $(blues[i]).animate({
+      x: newX,
+      y: newY,
+      width: newWidth,
+      height: newHeight
+    }, 400, complete=function(){
+
+        blues[i].setAttribute("x", newX);
+        blues[i].setAttribute("y", newY);
+        blues[i].setAttribute("width", newWidth);
+        blues[i].setAttribute("height", newHeight);
+      } );
+
+  }
+  $("line").css('stroke-width', randomInRange(10,40));
+  for(let i = 0; i < hiddens.length; i++){
+    let bounding = hiddens[i].getBoundingClientRect();
+    let oldX = parseFloat(bounding.x);
+    let oldY = parseFloat(bounding.y);
+    let newWidth = randomInRange(50,200);
+    let newHeight = randomInRange(50,200);
+    let newX = oldX + randomInRange(-50,50)-bodyPaddingLeft;
+    let newY = oldY + randomInRange(-50,50);
+    newX = Math.max(Math.min(newX, upperBoundX), lowerBoundX);
+    newY = Math.max(Math.min(newY, upperBoundY), lowerBoundY);
+    console.log(oldX);
+    console.log(newX);
+
+    $(hiddens[i]).animate({
+      x: newX,
+      y: newY,
+      width: newWidth,
+      height: newHeight
+    }, 400, complete=function(){
+
+        hiddens[i].setAttribute("x", newX);
+        hiddens[i].setAttribute("y", newY);
+        hiddens[i].setAttribute("width", newWidth);
+        hiddens[i].setAttribute("height", newHeight);
+        hiddens[i].style.fill = changeColor();
+      } );
+
+  }
 });
 
-$(".yellow_cont").click(function(){
-  $(".hidden_y").css({
-    "fill": changeColor(),
-    "width": positionElements(60,120),
-    "height": positionElements(60,120),
-    "x": scaleElements(50, 100),
-    "y": scaleElements(50, 100)
-  });
-  $(".yellow").animate({
-    "width": positionElements(60,120),
-    "height": positionElements(60,120),
-    "x": scaleElements(50, 100),
-    "y": scaleElements(50, 100)
-  }, 500, function(){});
-  $("line").css('stroke-width', (Math.random()*15 +10));
+$(".yellow_cont, .yellow").click(function(){
+  let hiddens = document.getElementsByClassName("hidden_y");
+  let yellows = document.getElementsByClassName("yellow");
+  for(let i = 0; i < yellows.length; i++){
+    let bounding = yellows[i].getBoundingClientRect();
+    let oldX = parseFloat(bounding.x);
+    let oldY = parseFloat(bounding.y);
+    let newWidth = randomInRange(50,200);
+    let newHeight = randomInRange(50,200);
+    let newX = oldX + randomInRange(-50,50)-bodyPaddingLeft;
+    let newY = oldY + randomInRange(-50,50);
+    newX = Math.max(Math.min(newX, upperBoundX), lowerBoundX);
+    newY = Math.max(Math.min(newY, upperBoundY), lowerBoundY);
+    console.log(oldX);
+    console.log(newX);
+
+    $(yellows[i]).animate({
+      x: newX,
+      y: newY,
+      width: newWidth,
+      height: newHeight
+    }, 400, complete=function(){
+
+        yellows[i].setAttribute("x", newX);
+        yellows[i].setAttribute("y", newY);
+        yellows[i].setAttribute("width", newWidth);
+        yellows[i].setAttribute("height", newHeight);
+      } );
+
+  }
+  $("line").css('stroke-width', randomInRange(10,40));
+  for(let i = 0; i < hiddens.length; i++){
+    let bounding = hiddens[i].getBoundingClientRect();
+    let oldX = parseFloat(bounding.x);
+    let oldY = parseFloat(bounding.y);
+    let newWidth = randomInRange(50,200);
+    let newHeight = randomInRange(50,200);
+    let newX = oldX + randomInRange(-50,50)-bodyPaddingLeft;
+    let newY = oldY + randomInRange(-50,50);
+    newX = Math.max(Math.min(newX, upperBoundX), lowerBoundX);
+    newY = Math.max(Math.min(newY, upperBoundY), lowerBoundY);
+    console.log(oldX);
+    console.log(newX);
+
+    $(hiddens[i]).animate({
+      x: newX,
+      y: newY,
+      width: newWidth,
+      height: newHeight
+    }, 400, complete=function(){
+
+        hiddens[i].setAttribute("x", newX);
+        hiddens[i].setAttribute("y", newY);
+        hiddens[i].setAttribute("width", newWidth);
+        hiddens[i].setAttribute("height", newHeight);
+        hiddens[i].style.fill = changeColor();
+      } );
+
+  }
 });
 
 //hover states
-//Status: In progress, lines restore, sclaes not reverting
-//need to write position revert and smooth animation
+//Status: Working, slow and sad looking, no transition back
 $(".red_cont").on('mouseenter', function(){
-  $(".red").css({
-    "width": (Math.random()*50 + 5)+"%",
-    "height":(Math.random()*50 + 5)+"%",
-    "x": (Math.random()*75)+"%",
-    "y": (Math.random()*75)+"%"
-  });
-  $("line").css('stroke-width', (Math.random()*15 +5));
+  let reds = document.getElementsByClassName("red");
+  for(let i = 0; i < reds.length; i++){
+    reds[i].animate([
+      { transform: 'translate('+randomInRange(-200,200)+'px, '+ randomInRange(-200,200)+'px)'},
+      { transform: 'scale('+randomInRange(.75,1.50)+','+ randomInRange(.75,1.50)+')'}
+    ], {
+      duration: 3000,
+      direction: 'alternate'
+    });
+  };
+  $("line").css('stroke-width', randomInRange(10,40));
 });
-$(".red_cont").on('mouseleave', function(){
-  $(".small").css({
-    "width": "50px",
-    "height": "50px"
-  }); 
-  $(".medium").css({
-    "width": "75px",
-    "height": "75px"
-  });
-  $(".large").css({
-    "width": "150px",
-    "height": "200px"
-  }); 
-  $(".xl").css({
-    "width": "150px",
-    "height": "300px"
-  });
-  $(".wide").css({
-    "width": "150px",
-    "height": "100px"
-  });
-  //maybe storing original positions in an array based on letter for position
-  $("line").css('stroke-width', 15);
-=======
-//reusable functions
-//Status: working, may want to make transform functions
-let upperBound = 1;
-let lowerBound= 0;
-
-function changeColor() {
-  let colors = ["#F90505", "#F9D507", "#0781C0"];
-  let random = Math.floor(Math.random()*3);
-  return colors[random];
-  }
-
-function scaleElements(upperBound, lowerBound){
-  return (Math.random()*lowerBound + (upperBound-lowerBound));
-};
-
-function positionElements(upperBound, lowerBound){
-  return (Math.random()*lowerBound + (upperBound-lowerBound));
-};
-
-//active states
-//Status: working, need to implement smooth animation, special letter tweaks
-$(".red_cont").click(function(){
-  $(".hidden").css({
-    "fill": changeColor(),
-    "width": scaleElements(50,100),
-    "height": scaleElements(50,100),
-    "x": positionElements(175, 250),
-    "y": positionElements(175, 250)
-  });
-  $(".red").animate({
-    "width": scaleElements(50,100),
-    "height": scaleElements(50,100),
-    "x": positionElements(175, 250),
-    "y": positionElements(175, 250)
-  }, 400, function(){});
-  $("line:not('.thinLine')").css('stroke-width', (Math.random()*15 +20));
+$(".yellow_cont").on('mouseenter', function(){
+  let yellows = document.getElementsByClassName("yellow");
+  for(let i = 0; i < yellows.length; i++){
+    yellows[i].animate([
+      { transform: 'translate('+randomInRange(-200,200)+'px, '+ randomInRange(-200,200)+'px)'},
+      { transform: 'scale('+randomInRange(.75,1.50)+','+ randomInRange(.75,1.50)+')'}
+    ], {
+      duration: 3000,
+      direction: 'alternate'
+    });
+  };
+  $("line").css('stroke-width', randomInRange(10,40));
 });
-
-$(".blue_cont").click(function(){
-  $(".hidden_b").css({
-    "fill": changeColor(),
-    "width": positionElements(40,90),
-    "height": positionElements(40,90),
-    "x": scaleElements(60, 120),
-    "y": scaleElements(60, 120)
-  });
-  $(".blue").animate({
-    "width": positionElements(40,90),
-    "height": positionElements(40,90),
-    "x": scaleElements(60, 120),
-    "y": scaleElements(60, 120)
-  }, 300, function(){});
-  $("line").css('stroke-width', (Math.random()*15 +10));
-});
-
-$(".yellow_cont").click(function(){
-  $(".hidden_y").css({
-    "fill": changeColor(),
-    "width": positionElements(60,120),
-    "height": positionElements(60,120),
-    "x": scaleElements(50, 100),
-    "y": scaleElements(50, 100)
-  });
-  $(".yellow").animate({
-    "width": positionElements(60,120),
-    "height": positionElements(60,120),
-    "x": scaleElements(50, 100),
-    "y": scaleElements(50, 100)
-  }, 500, function(){});
-  $("line").css('stroke-width', (Math.random()*15 +10));
-});
-
-//hover states
-//Status: In progress, lines restore, sclaes not reverting
-//need to write position revert and smooth animation
-$(".red_cont").on('mouseenter', function(){
-  $(".red").css({
-    "width": (Math.random()*50 + 5)+"%",
-    "height":(Math.random()*50 + 5)+"%",
-    "x": (Math.random()*75)+"%",
-    "y": (Math.random()*75)+"%"
-  });
-  $("line").css('stroke-width', (Math.random()*15 +5));
-});
-$(".red_cont").on('mouseleave', function(){
-  $(".small").css({
-    "width": "50px",
-    "height": "50px"
-  }); 
-  $(".medium").css({
-    "width": "75px",
-    "height": "75px"
-  });
-  $(".large").css({
-    "width": "150px",
-    "height": "200px"
-  }); 
-  $(".xl").css({
-    "width": "150px",
-    "height": "300px"
-  });
-  $(".wide").css({
-    "width": "150px",
-    "height": "100px"
-  });
-  //maybe storing original positions in an array based on letter for position
-  $("line").css('stroke-width', 15);
->>>>>>> 331c02fbc55421c129df16f627b8e6ff3f9a0a35
+$(".blue_cont").on('mouseenter', function(){
+  let blues = document.getElementsByClassName("blue");
+  for(let i = 0; i < blues.length; i++){
+    blues[i].animate([
+      { transform: 'translate('+randomInRange(-200,200)+'px, '+ randomInRange(-200,200)+'px)'},
+      { transform: 'scale('+randomInRange(.75,1.50)+','+ randomInRange(.75,1.50)+')'}
+    ], {
+      duration: 3000,
+      direction: 'alternate'
+    });
+  };
+  $("line").css('stroke-width', randomInRange(10,40));
 });

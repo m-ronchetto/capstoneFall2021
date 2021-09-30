@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 polyline{
     fill: none;
     stroke: black;
@@ -17,49 +16,8 @@ line{
     fill:black;
     stroke: none;
 }
-.yellow{
-    fill: #F9D507;
-    stroke: none;
-}
-.red{
-    fill: #F90505;
-    stroke: none;
-}
-.blue{
-    fill:#0781C0;
-    stroke:none;
-}
-.hidden, .hidden_b, .hidden_y{
-    fill:none;
-    stroke:none;
-}
-body{
-    padding-left: 5%;
-    margin: auto;
-}
-#container{
-    display: flex;
-}
-svg>svg{
-    display: inline;
-=======
-polyline{
-    fill: none;
-    stroke: black;
-    stroke-width: 2px;
-}
-line{
-    stroke-width: 15px;
-}
-#boldPoly{
-    stroke-width: 15px;
-}
-.thinLine{
-    stroke-width: 2px;
-}
-#horizontal{
-    fill:black;
-    stroke: none;
+rect{
+    opacity: 75%;
 }
 .yellow{
     fill: #F9D507;
@@ -68,17 +26,26 @@ line{
 .red{
     fill: #F90505;
     stroke: none;
+    transform-origin: center;
 }
 .blue{
     fill:#0781C0;
     stroke:none;
 }
-.hidden, .hidden_b, .hidden_y{
+.hidden{
+    fill:none;
+    stroke:none;
+}
+.hidden_b{
+    fill:none;
+    stroke:none;
+}
+.hidden_y{
     fill:none;
     stroke:none;
 }
 body{
-    padding-left: 5%;
+    padding-left: 100px;
     margin: auto;
 }
 #container{
@@ -86,5 +53,4 @@ body{
 }
 svg>svg{
     display: inline;
->>>>>>> 331c02fbc55421c129df16f627b8e6ff3f9a0a35
 }
