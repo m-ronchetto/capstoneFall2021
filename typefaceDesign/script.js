@@ -29,11 +29,12 @@ $(".red_cont, .red").click(function(){
   let reds = document.getElementsByClassName("red");
   for(let i = 0; i < hiddens.length; i++){
     let bounding = hiddens[i].getBoundingClientRect();
-    let oldX = parseFloat(bounding.x);
-    let oldY = parseFloat(bounding.y);
+    let parentBounding = hiddens[i].parentNode.getBoundingClientRect();
+    let oldX = parseFloat(bounding.x)-parseFloat(parentBounding.x);
+    let oldY = parseFloat(bounding.y)-parseFloat(parentBounding.y);
     let newWidth = randomInRange(50,200);
     let newHeight = randomInRange(50,200);
-    let newX = oldX + randomInRange(-50,50)-bodyPaddingLeft;
+    let newX = oldX + randomInRange(-50,50);
     let newY = oldY + randomInRange(-50,50);
     newX = Math.max(Math.min(newX, upperBoundX), lowerBoundX);
     newY = Math.max(Math.min(newY, upperBoundY), lowerBoundY);
@@ -57,11 +58,12 @@ $(".red_cont, .red").click(function(){
   }
   for(let i = 0; i < reds.length; i++){
     let bounding = reds[i].getBoundingClientRect();
-    let oldX = parseFloat(bounding.x);
-    let oldY = parseFloat(bounding.y);
+    let parentBounding = reds[i].parentNode.getBoundingClientRect();
+    let oldX = parseFloat(bounding.x)-parseFloat(parentBounding.x);
+    let oldY = parseFloat(bounding.y)-parseFloat(parentBounding.y);
     let newWidth = randomInRange(50,200);
     let newHeight = randomInRange(50,200);
-    let newX = oldX + randomInRange(-50,50)-bodyPaddingLeft;
+    let newX = oldX + randomInRange(-50,50);
     let newY = oldY + randomInRange(-50,50);
     newX = Math.max(Math.min(newX, upperBoundX), lowerBoundX);
     newY = Math.max(Math.min(newY, upperBoundY), lowerBoundY);
@@ -91,11 +93,12 @@ $(".blue_cont, .blue").click(function(){
   let blues = document.getElementsByClassName("blue");
   for(let i = 0; i < blues.length; i++){
     let bounding = blues[i].getBoundingClientRect();
-    let oldX = parseFloat(bounding.x);
-    let oldY = parseFloat(bounding.y);
+    let parentBounding = blues[i].parentNode.getBoundingClientRect();
+    let oldX = parseFloat(bounding.x)-parseFloat(parentBounding.x);
+    let oldY = parseFloat(bounding.y)-parseFloat(parentBounding.y);
     let newWidth = randomInRange(50,200);
     let newHeight = randomInRange(50,200);
-    let newX = oldX + randomInRange(-50,50)-bodyPaddingLeft;
+    let newX = oldX + randomInRange(-50,50);
     let newY = oldY + randomInRange(-50,50);
     newX = Math.max(Math.min(newX, upperBoundX), lowerBoundX);
     newY = Math.max(Math.min(newY, upperBoundY), lowerBoundY);
@@ -119,11 +122,12 @@ $(".blue_cont, .blue").click(function(){
   $("line").css('stroke-width', randomInRange(10,40));
   for(let i = 0; i < hiddens.length; i++){
     let bounding = hiddens[i].getBoundingClientRect();
-    let oldX = parseFloat(bounding.x);
-    let oldY = parseFloat(bounding.y);
+    let parentBounding = hiddens[i].parentNode.getBoundingClientRect();
+    let oldX = parseFloat(bounding.x)-parseFloat(parentBounding.x);
+    let oldY = parseFloat(bounding.y)-parseFloat(parentBounding.y);
     let newWidth = randomInRange(50,200);
     let newHeight = randomInRange(50,200);
-    let newX = oldX + randomInRange(-50,50)-bodyPaddingLeft;
+    let newX = oldX + randomInRange(-50,50);
     let newY = oldY + randomInRange(-50,50);
     newX = Math.max(Math.min(newX, upperBoundX), lowerBoundX);
     newY = Math.max(Math.min(newY, upperBoundY), lowerBoundY);
@@ -152,11 +156,12 @@ $(".yellow_cont, .yellow").click(function(){
   let yellows = document.getElementsByClassName("yellow");
   for(let i = 0; i < yellows.length; i++){
     let bounding = yellows[i].getBoundingClientRect();
-    let oldX = parseFloat(bounding.x);
-    let oldY = parseFloat(bounding.y);
+    let parentBounding = yellows[i].parentNode.getBoundingClientRect();
+    let oldX = parseFloat(bounding.x)-parseFloat(parentBounding.x);
+    let oldY = parseFloat(bounding.y)-parseFloat(parentBounding.y);
     let newWidth = randomInRange(50,200);
     let newHeight = randomInRange(50,200);
-    let newX = oldX + randomInRange(-50,50)-bodyPaddingLeft;
+    let newX = oldX + randomInRange(-50,50);
     let newY = oldY + randomInRange(-50,50);
     newX = Math.max(Math.min(newX, upperBoundX), lowerBoundX);
     newY = Math.max(Math.min(newY, upperBoundY), lowerBoundY);
@@ -180,11 +185,12 @@ $(".yellow_cont, .yellow").click(function(){
   $("line").css('stroke-width', randomInRange(10,40));
   for(let i = 0; i < hiddens.length; i++){
     let bounding = hiddens[i].getBoundingClientRect();
-    let oldX = parseFloat(bounding.x);
-    let oldY = parseFloat(bounding.y);
+    let parentBounding = hiddens[i].parentNode.getBoundingClientRect();
+    let oldX = parseFloat(bounding.x)-parseFloat(parentBounding.x);
+    let oldY = parseFloat(bounding.y)-parseFloat(parentBounding.y);
     let newWidth = randomInRange(50,200);
     let newHeight = randomInRange(50,200);
-    let newX = oldX + randomInRange(-50,50)-bodyPaddingLeft;
+    let newX = oldX + randomInRange(-50,50);
     let newY = oldY + randomInRange(-50,50);
     newX = Math.max(Math.min(newX, upperBoundX), lowerBoundX);
     newY = Math.max(Math.min(newY, upperBoundY), lowerBoundY);
