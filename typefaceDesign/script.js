@@ -178,6 +178,7 @@ $(".yellow_cont, .yellow").click(function(){
 
   }
   $("line").css('stroke-width', randomInRange(10,40));
+  // $("polyline").css('stroke-width', randomInRange(2,10))
   for(let i = 0; i < hiddens.length; i++){
     let bounding = hiddens[i].getBoundingClientRect();
     let oldX = parseFloat(bounding.x);

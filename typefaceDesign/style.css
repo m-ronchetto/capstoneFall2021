@@ -47,8 +47,29 @@ rect{
 body{
     padding-left: 100px;
     margin: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-#container{
+#container1{
+    display: flex;
+}
+#sidebar{
+    width: 33%;
+    border-left: 3px solid black;
+    padding-left: 20px;
+}
+#header{
+    border-bottom: 3px solid black;
+}
+h1{
+    font-size: 5rem;
+}
+h2{
+    font-size: 3rem;
+}
+p{
+    font-size: 1.5rem;
+}
+#site{
     display: flex;
 }
 svg>svg{
